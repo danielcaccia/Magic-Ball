@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="550" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yes" translatesAutoresizingMaskIntoConstraints="NO" id="wpD-1v-Sun">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wpD-1v-Sun">
                                 <rect key="frame" x="59" y="335" width="257" height="257"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -33,12 +33,20 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyH-D8-WKp">
                                 <rect key="frame" x="214" y="76" width="131" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="button"/>
+                                <state key="normal" backgroundImage="button"/>
+                                <connections>
+                                    <action selector="askButtonDown:" destination="BYZ-38-t0r" eventType="touchDown" id="W34-ey-One"/>
+                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m18-Ko-wYp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.0040160906499999999" green="0.1011118367" blue="0.1686395705" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="answerImage" destination="wpD-1v-Sun" id="jo9-su-d01"/>
+                        <outlet property="askButton" destination="GyH-D8-WKp" id="7UW-Bf-H9m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,6 +56,5 @@
     <resources>
         <image name="button" width="454" height="662"/>
         <image name="crystal-ball" width="2048" height="1367"/>
-        <image name="yes" width="380" height="380"/>
     </resources>
 </document>
